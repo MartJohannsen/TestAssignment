@@ -18,9 +18,7 @@ public class UnitTests
     @Test
     public void hellowWorldTest()
     {
-        String txt = "Hello bandit.";
-        LogHandler.getInstance().logMessage("Bueno", "XML");
-        assertEquals(txt, "Hello bandit.");
+        XMLHandler.getInstance().readXMLFile(new File("C:\\Users\\Martin\\IdeaProjects\\UnitTestProject\\data\\xmlforuserstory.XML"));
     }
 
 

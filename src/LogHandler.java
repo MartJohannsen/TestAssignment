@@ -42,7 +42,7 @@ public class LogHandler
 
     }
 
-    public String createLogMessage(String message, String type)
+    private String createLogMessage(String message, String type)
     {
         Date date= new Date();
 
@@ -52,7 +52,7 @@ public class LogHandler
         return ts + " => " + type + " => " + message;
     }
 
-    public String readFile(File file)
+    private String readFile(File file)
     {
         String text = "";
 
