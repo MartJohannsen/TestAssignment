@@ -192,7 +192,7 @@
 				<ATWAI currCode="USD">200</ATWAI>
 				<ATWWA currCode="USD">222</ATWWA>
 				<OtherInfo>
-					<NL-VERGUNNING xmlns="10AFM-NL-2000"/>
+					<NL-VERGUNNING xmlns="AFM-NL-2000"/>
 				</OtherInfo>
 			</Payment>
 		</OAIS>

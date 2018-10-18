@@ -1,8 +1,10 @@
-import org.w3c.dom.*;
-import org.xml.sax.*;
-import javax.xml.parsers.*;
-import javax.xml.xpath.*;
-import java.io.*;
+import org.jdom2.Document;
+import org.jdom2.JDOMException;
+import org.jdom2.input.SAXBuilder;
+import org.jdom2.output.XMLOutputter;
+
+import java.io.File;
+import java.io.IOException;
 
 public class XMLHandler
 {
@@ -17,53 +19,37 @@ public class XMLHandler
     {
     }
 
-    public void readXMLFile(File inputFile)
+    public Document getXMLDocument(File inputFile)
     {
         try
         {
-            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder dBuilder;
-
-            dBuilder = dbFactory.newDocumentBuilder();
-
-            Document doc = dBuilder.parse(inputFile);
-            doc.getDocumentElement().normalize();
-
-            XPath xPath =  XPathFactory.newInstance().newXPath();
-
-            String expression = "/TRACE_OECD/MessageSpec";
-            NodeList nodeList = (NodeList) xPath.compile(expression).evaluate(
-                    doc, XPathConstants.NODESET);
-
-            for (int i = 0; i < nodeList.getLength(); i++) {
-                Node nNode = nodeList.item(i);
-                System.out.println("\nCurrent Element :" + nNode.getNodeName());
-
-                if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-                    Element eElement = (Element) nNode;
-                    System.out.println("Something :");
-                    System.out.println("SendingCountry : "
-                            + eElement
-                            .getElementsByTagName("SendingCountry")
-                            .item(0)
-                            .getTextContent());
-                }
-            }
-        } catch (ParserConfigurationException e)
-        {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e)
-        {
-            e.printStackTrace();
-        } catch (IOException e)
-        {
-            e.printStackTrace();
-        } catch (SAXException e)
-        {
-            e.printStackTrace();
-        } catch (XPathExpressionException e)
+            SAXBuilder saxBuilder = new SAXBuilder();
+            Document document = saxBuilder.build(inputFile);
+            return document;
+        }
+        catch (JDOMException | IOException e)
         {
             e.printStackTrace();
         }
+        return null;
+    }
+
+    public String convertDocumentToString(Document doc)
+    {
+        return new XMLOutputter().outputString(doc);
+    }
+
+    public Document convertStringToDocument(String xmlStr)
+    {
+        try
+        {
+            SAXBuilder saxBuilder = new SAXBuilder();
+            return saxBuilder.build(xmlStr);
+        }
+        catch (JDOMException | IOException e)
+        {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

@@ -1,25 +1,49 @@
+
+import org.jdom2.Document;
+import org.jdom2.Element;
 import org.junit.jupiter.api.Test;
-import org.w3c.dom.*;
-import org.xml.sax.*;
-import javax.xml.parsers.*;
-import javax.xml.xpath.*;
-import java.io.*;
+
+import java.io.File;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 
+public class UnitTests {
+    private final String XML_FILE = "C:\\Users\\Christian\\IdeaProjects\\TestAssignment\\data\\xmlforuserstory.XML";
 
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-/**
- * Created by Martin on 11-10-2018.
- */
-public class UnitTests
-{
     @Test
-    public void hellowWorldTest()
+    public void helloWorldTest()
     {
-        XMLHandler.getInstance().readXMLFile(new File("C:\\Users\\Martin\\IdeaProjects\\UnitTestProject\\data\\xmlforuserstory.XML"));
+        Document document = XMLHandler.getInstance().getXMLDocument(new File(XML_FILE));
+        System.out.println("Root element :" + document.getRootElement().getName());
+        Element classElement = document.getRootElement();
+
+        List<Element> elementList = classElement.getChildren();
+        System.out.println("----------------------------");
+
+        if (elementList != null)
+        {
+            for (Element node : elementList)
+            {
+                System.out.println("Element Name: " + node.getName());
+                System.out.println("Element Text: " + node.getValue());
+
+                if (node.getChildren() == null || node.getChildren().isEmpty())
+                    continue;
+            }
+        }
     }
 
+    @Test
+    public void VelformedNessTest()
+    {
+        Document document = (Document) XMLHandler.getInstance().getXMLDocument(new File(XML_FILE));
 
+        String xmlString = XMLHandler.getInstance().convertDocumentToString(document);
+
+        Document xmlDocument = XMLHandler.getInstance().convertStringToDocument(xmlString);
+
+        assertNotNull(xmlDocument);
+    }
 }

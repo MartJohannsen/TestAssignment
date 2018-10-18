@@ -9,7 +9,7 @@
 		<xsd:annotation>
 			<xsd:documentation xml:lang="en">
 The International Bank Account Number has to be given here for the account into which the payment in question
-has been made. Depending on the transmission type this element is optional. Its structure is:
+has been made. Depending on the transmission typFe this element is optional. Its structure is:
 Country code, 2 letters/Check digits, 2 digits/Basic Bank Account Number (BBAN), 10 to 30 alphanumeric characters
 </xsd:documentation>
 		</xsd:annotation>
