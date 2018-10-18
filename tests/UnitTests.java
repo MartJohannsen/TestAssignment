@@ -8,6 +8,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.fail;
 
 
 public class UnitTests
@@ -38,26 +39,28 @@ public class UnitTests
     }
 
     @Test
-    public void VelformedNessNotNullTest()
+    public void wellFormednessNotNull()
     {
         Document document = XMLHandler.getInstance().getXMLDocument(new File(XML_FILE));
 
-        String xmlString = XMLHandler.getInstance().convertDocumentToString(document);
-
-        Document xmlDocument = XMLHandler.getInstance().convertStringToDocument(xmlString);
-
-        assertNotNull(xmlDocument);
+        //If this document is null, the test fails, else succes
+        if(document == null)
+        {
+            LogHandler.getInstance().logMessage("Document is not Wellformed", "Validation Error");
+            fail("Is Null");
+        }
     }
 
     @Test
-    public void VelformedNessIsNullTest()
+    public void wellFormednessIsNull()
     {
         Document document = XMLHandler.getInstance().getXMLDocument(new File(XML_FILE));
 
-        String xmlString = XMLHandler.getInstance().convertDocumentToString(document);
-
-        Document xmlDocument = XMLHandler.getInstance().convertStringToDocument(xmlString);
-
-        assertNull(xmlDocument);
+        //If this document is not null(we want it to be null), the test fails, else succes (the document is null)
+        if(document != null)
+        {
+            LogHandler.getInstance().logMessage("Document is not Wellformed", "Validation Error");
+            fail("Is Not Null");
+        }
     }
 }

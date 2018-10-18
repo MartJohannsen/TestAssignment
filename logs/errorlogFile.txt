@@ -1,4 +1,1 @@
-2018-10-11 13:18:20.136 => Error => Xml failed
-2018-10-11 13:22:32.549 => XML => Bueno
-2018-10-11 13:35:52.727 => XML => Bueno
-2018-10-11 13:40:37.875 => XML => Bueno
+2018-10-18 14:00:00.02 => Validation Error => Document is not Wellformed

@@ -19,8 +19,7 @@ public class LogHandler
 
     public void logMessage(String message, String type)
     {
-        File logFile = new File("C://Users//Martin//IdeaProjects//UnitTestProject//logs//" +
-                "errorlogFile.txt");
+        File logFile = new File("logs\\" + "errorlogFile.txt");
 
         if (logFile.exists())
         {
@@ -32,8 +31,6 @@ public class LogHandler
 
                 printStream.append(text);
                 printStream.append(createLogMessage(message, type) + "\n");
-
-                System.out.println(readFile(logFile));
             } catch (FileNotFoundException e)
             {
                 e.printStackTrace();
@@ -55,7 +52,6 @@ public class LogHandler
     private String readFile(File file)
     {
         String text = "";
-
         try
         {
             Scanner scanner = new Scanner(file);
@@ -64,7 +60,8 @@ public class LogHandler
             {
                 text += scanner.nextLine() + "\n";
             }
-        } catch (FileNotFoundException e)
+        }
+        catch (FileNotFoundException e)
         {
             e.printStackTrace();
         }

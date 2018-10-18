@@ -19,7 +19,7 @@ public class XMLHandler
     {
     }
 
-    public Document getXMLDocument(File inputFile)
+    public Document getXMLDocument(File inputFile) throws NullPointerException
     {
         try
         {
