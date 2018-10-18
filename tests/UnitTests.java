@@ -7,10 +7,12 @@ import java.io.File;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 
-public class UnitTests {
-    private final String XML_FILE = "C:\\Users\\Christian\\IdeaProjects\\TestAssignment\\data\\xmlforuserstory.XML";
+public class UnitTests
+{
+    private final String XML_FILE = "data\\Students.XML";
 
     @Test
     public void helloWorldTest()
@@ -36,14 +38,26 @@ public class UnitTests {
     }
 
     @Test
-    public void VelformedNessTest()
+    public void VelformedNessNotNullTest()
     {
-        Document document = (Document) XMLHandler.getInstance().getXMLDocument(new File(XML_FILE));
+        Document document = XMLHandler.getInstance().getXMLDocument(new File(XML_FILE));
 
         String xmlString = XMLHandler.getInstance().convertDocumentToString(document);
 
         Document xmlDocument = XMLHandler.getInstance().convertStringToDocument(xmlString);
 
         assertNotNull(xmlDocument);
+    }
+
+    @Test
+    public void VelformedNessIsNullTest()
+    {
+        Document document = XMLHandler.getInstance().getXMLDocument(new File(XML_FILE));
+
+        String xmlString = XMLHandler.getInstance().convertDocumentToString(document);
+
+        Document xmlDocument = XMLHandler.getInstance().convertStringToDocument(xmlString);
+
+        assertNull(xmlDocument);
     }
 }
