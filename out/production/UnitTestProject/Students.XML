@@ -1,0 +1,14 @@
+<?xml version = "1.0"?>
+<class>
+    <student rollno = "1">
+        <firstname>Christian</firstname>
+        <lastname>Hvidkjaer</lastname>
+        <marks>Torsk</marks>
+    </student>
+
+    <student rollno = "2">
+        <firstname>Martin</firstname>
+        <lastname>Johannsen</lastname>
+        <marks>fisk</marks>
+    </student>
+</class>
