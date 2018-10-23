@@ -1,8 +1,2 @@
-2018-10-18 14:00:00.02 => Validation Error => Document is not Wellformed
-2018-10-23 13:44:42.429 => Element Validition Error => Text is null
-2018-10-23 13:45:58.754 => Element Validition Error => Text is null
-2018-10-23 13:48:47.357 => Element Validition Error; firstname does only contain letters, Element: firstname, Value: Christian => Text is null
-2018-10-23 13:49:04.808 => Element Validition Error; firstname does only contain letters, Element: firstname, Value: Christian => Text is null
-2018-10-23 13:49:04.867 => Validation Error => Document is not Wellformed
-2018-10-23 13:55:55.486 => Element Validition Error; firstname does only contain letters, Element: firstname, Value: Christian, Element: lastname, Value: Hvidkjaer => Text is null
-2018-10-23 13:55:55.553 => Validation Error => Document is not Wellformed
+2018-10-23 14:18:24.647 => Element validation error. => For input string: "fisk"
+2018-10-23 14:22:48.347 => Element validation error. => The mark was not validated as a number.

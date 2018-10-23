@@ -61,6 +61,62 @@ public class UnitTests
     }
 
     @Test
+    public void isMark()
+    {
+        Document document = XMLHandler.getInstance().getXMLDocument(new File(XML_FILE));
+        Element classElement = document.getRootElement();
+
+        List<Element> elementList = classElement.getChildren();
+
+        if (elementList != null)
+        {
+            for (Element node : elementList)
+            {
+                try
+                {
+                    Integer marks = Integer.parseInt(node.getChild("marks").getValue());
+                    System.out.println("number is:  " + marks);
+                }
+                catch (NumberFormatException ex)
+                {
+                    // ex.printStackTrace();
+                    LogHandler.getInstance().logMessage(ex.getMessage(), "Element validation error.");
+                    fail("The parsed number was not an integer.");
+                }
+
+            }
+        }
+    }
+
+    @Test
+    public void isNotMark()
+    {
+        Document document = XMLHandler.getInstance().getXMLDocument(new File(XML_FILE));
+        Element classElement = document.getRootElement();
+
+        List<Element> elementList = classElement.getChildren();
+
+        if (elementList != null)
+        {
+            for (Element node : elementList)
+            {
+                try
+                {
+                    Integer marks = Integer.parseInt(node.getChild("marks").getValue());
+                    System.out.println("number is:  " + marks);
+
+                    LogHandler.getInstance().logMessage("The mark was not validated as a number.", "Element validation error.");
+                    fail("The parsed number was an integer.");
+                }
+                catch (NumberFormatException ex)
+                {
+                    continue;
+                }
+            }
+        }
+    }
+
+    @Test
     public void nameIsString()
     {
         Document document = XMLHandler.getInstance().getXMLDocument(new File(XML_FILE));
