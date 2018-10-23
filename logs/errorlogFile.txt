@@ -1,2 +1,6 @@
+2018-10-23 14:10:42.591 => Element Validition Error;  => Student is not Active, Element: isactive, Value: false
+2018-10-23 14:11:56.898 => Element Validition Error;  => Firstname does not only contain letters, Element: firstname, Value: Christian, Element: lastname, Value: Hvidkjaer
+2018-10-23 14:11:56.957 => Element Validition Error;  => Student is not Active, Element: isactive, Value: true
+2018-10-23 14:11:56.98 => Validation Error => Document is not Wellformed
 2018-10-23 14:18:24.647 => Element validation error. => For input string: "fisk"
 2018-10-23 14:22:48.347 => Element validation error. => The mark was not validated as a number.

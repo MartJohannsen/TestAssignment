@@ -3,12 +3,14 @@
     <student rollno = "1">
         <firstname>Christian</firstname>
         <lastname>Hvidkjaer</lastname>
-        <marks>Torsk</marks>
+        <isactive>true</isactive>
+        <marks>12</marks>
     </student>
 
     <student rollno = "2">
         <firstname>Martin</firstname>
         <lastname>Johannsen</lastname>
-        <marks>fisk</marks>
+        <isactive>true</isactive>
+        <marks>12</marks>
     </student>
 </class>
