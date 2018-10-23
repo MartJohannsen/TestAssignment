@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b796fee4-5806-4ab9-bfb9-15fdbcb308e4" name="Default" comment="- Fixed The Error Logging&#10;- Added a positive and negative test on wellformedness">
+    <list default="true" id="b796fee4-5806-4ab9-bfb9-15fdbcb308e4" name="Default" comment="- Added test for names">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Students.XML" beforeDir="false" afterPath="$PROJECT_DIR$/data/Students.XML" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/errorlogFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/logs/errorlogFile.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/UnitTestProject/LogHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/UnitTestProject/LogHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/UnitTestProject/UnitTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/UnitTestProject/UnitTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/UnitTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/UnitTests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -27,17 +26,17 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="XML" value="48" />
-          <entry key="java" value="1889" />
-          <entry key="txt" value="146" />
+          <entry key="XML" value="75" />
+          <entry key="java" value="2103" />
+          <entry key="txt" value="167" />
           <entry key="xsd" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1889" />
-          <entry key="PLAIN_TEXT" value="146" />
-          <entry key="XML" value="50" />
+          <entry key="JAVA" value="2103" />
+          <entry key="PLAIN_TEXT" value="167" />
+          <entry key="XML" value="77" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -79,11 +78,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/UnitTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="133" column="45" selection-start-line="133" selection-start-column="45" selection-end-line="133" selection-end-column="45" />
+            <state relative-caret-position="187">
+              <caret line="11" column="39" lean-forward="true" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -99,8 +98,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/Students.XML">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="14" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="14" />
+            <state relative-caret-position="85">
+              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -114,11 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LogHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="32" column="75" selection-start-line="32" selection-start-column="75" selection-end-line="32" selection-end-column="75" />
+            <state relative-caret-position="340">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#341#342#0" expanded="true" />
@@ -162,8 +161,8 @@
         <option value="$PROJECT_DIR$/data/xmlforuserstory.XML" />
         <option value="$PROJECT_DIR$/data/TRACEXML_V1.0.xsd" />
         <option value="$PROJECT_DIR$/src/XMLHandler.java" />
-        <option value="$PROJECT_DIR$/logs/errorlogFile.txt" />
         <option value="$PROJECT_DIR$/src/LogHandler.java" />
+        <option value="$PROJECT_DIR$/logs/errorlogFile.txt" />
         <option value="$PROJECT_DIR$/data/Students.XML" />
         <option value="$PROJECT_DIR$/tests/UnitTests.java" />
       </list>
@@ -229,7 +228,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540295750470" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540296815129" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/data" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -366,11 +365,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UnitTests.helloWorldTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UnitTests.studentIsActive" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UnitTestProject" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="UnitTests" />
-      <option name="METHOD_NAME" value="helloWorldTest" />
+      <option name="METHOD_NAME" value="studentIsActive" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -456,18 +455,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.UnitTests" />
-      <item itemvalue="JUnit.UnitTests.helloWorldTest" />
       <item itemvalue="JUnit.UnitTests.wellFormednessNotNull" />
       <item itemvalue="JUnit.UnitTests.firstNameIsString" />
       <item itemvalue="JUnit.UnitTests.firstNameIsNotString" />
+      <item itemvalue="JUnit.UnitTests.studentIsActive" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.UnitTests" />
+        <item itemvalue="JUnit.UnitTests.studentIsActive" />
         <item itemvalue="JUnit.UnitTests.firstNameIsNotString" />
         <item itemvalue="JUnit.UnitTests.firstNameIsString" />
         <item itemvalue="JUnit.UnitTests.wellFormednessNotNull" />
-        <item itemvalue="JUnit.UnitTests.helloWorldTest" />
       </list>
     </recent_temporary>
   </component>
@@ -484,7 +483,7 @@
       <workItem from="1539239592851" duration="7900000" />
       <workItem from="1539847502380" duration="10648000" />
       <workItem from="1539860588811" duration="3697000" />
-      <workItem from="1540293694290" duration="2045000" />
+      <workItem from="1540293694290" duration="3686000" />
     </task>
     <task id="LOCAL-00001" summary="- I did stuff">
       <created>1539860682288</created>
@@ -514,31 +513,17 @@
       <option name="project" value="LOCAL" />
       <updated>1539864159675</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="- Added test for names">
+      <created>1540295813297</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1540295813297</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UnitTests - 2018.10.18 at 13h 59m 10s.xml">
-      <configuration name="UnitTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UnitTests - 2018.10.18 at 14h 00m 00s.xml">
-      <configuration name="UnitTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UnitTests_firstNameIsString - 2018.10.23 at 13h 41m 36s.xml">
-      <configuration name="UnitTests.firstNameIsString" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UnitTests_firstNameIsString - 2018.10.23 at 13h 42m 08s.xml">
-      <configuration name="UnitTests.firstNameIsString" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UnitTests_firstNameIsString - 2018.10.23 at 13h 42m 45s.xml">
-      <configuration name="UnitTests.firstNameIsString" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UnitTests_firstNameIsString - 2018.10.23 at 13h 44m 42s.xml">
-      <configuration name="UnitTests.firstNameIsString" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UnitTests_firstNameIsString - 2018.10.23 at 13h 45m 59s.xml">
-      <configuration name="UnitTests.firstNameIsString" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="UnitTests_firstNameIsString - 2018.10.23 at 13h 47m 09s.xml">
       <configuration name="UnitTests.firstNameIsString" configurationId="JUnit" />
     </history-entry>
@@ -548,9 +533,30 @@
     <history-entry file="UnitTests - 2018.10.23 at 13h 49m 05s.xml">
       <configuration name="UnitTests" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="UnitTests - 2018.10.23 at 13h 55m 55s.xml">
+      <configuration name="UnitTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UnitTests_studentIsActive - 2018.10.23 at 14h 09m 58s.xml">
+      <configuration name="UnitTests.studentIsActive" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UnitTests_studentIsActive - 2018.10.23 at 14h 10m 17s.xml">
+      <configuration name="UnitTests.studentIsActive" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UnitTests_studentIsActive - 2018.10.23 at 14h 10m 43s.xml">
+      <configuration name="UnitTests.studentIsActive" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UnitTests_studentIsActive - 2018.10.23 at 14h 11m 07s.xml">
+      <configuration name="UnitTests.studentIsActive" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UnitTests_studentIsActive - 2018.10.23 at 14h 11m 16s.xml">
+      <configuration name="UnitTests.studentIsActive" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UnitTests - 2018.10.23 at 14h 11m 57s.xml">
+      <configuration name="UnitTests" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24290000" />
+    <option name="totallyTimeSpent" value="25931000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -570,7 +576,7 @@
       <window_info anchor="bottom" id="Terminal" order="3" weight="0.25106382" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32907802" />
-      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.19007093" />
+      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.20851064" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.364539" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -598,7 +604,8 @@
     <MESSAGE value="- I did stuff" />
     <MESSAGE value="- We doing Student stuff now Boi" />
     <MESSAGE value="- Fixed The Error Logging&#10;- Added a positive and negative test on wellformedness" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Fixed The Error Logging&#10;- Added a positive and negative test on wellformedness" />
+    <MESSAGE value="- Added test for names" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Added test for names" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -640,18 +647,6 @@
     <entry file="file://$PROJECT_DIR$/UnitTestProject.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LogHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="32" column="75" selection-start-line="32" selection-start-column="75" selection-end-line="32" selection-end-column="75" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#341#342#0" expanded="true" />
-            <element signature="e#372#373#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.3.1/junit-platform-commons-1.3.1.jar!/org/junit/platform/commons/util/ReflectionUtils.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
@@ -659,22 +654,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/Students.XML">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logs/errorlogFile.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/Students.XML">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/UnitTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="133" column="45" selection-start-line="133" selection-start-column="45" selection-end-line="133" selection-end-column="45" />
+        <state relative-caret-position="187">
+          <caret line="11" column="39" lean-forward="true" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LogHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#341#342#0" expanded="true" />
+            <element signature="e#372#373#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -93,18 +93,19 @@ public class UnitTests
                 }
             }
         }
+        else
+        {
+            LogHandler.getInstance().logMessage("Document is null", "Validition Error; ");
+            fail("Document is null");
+        }
     }
 
     public boolean isString(String str)
     {
         if (str.chars().allMatch(Character::isLetter))
-        {
             return true;
-        }
         else
-        {
             return false;
-        }
     }
 
     @Test
@@ -127,18 +128,100 @@ public class UnitTests
 
                 if (isString(firstName) || isString(lastName))
                 {
-                    LogHandler.getInstance().logMessage("Text is null", "Element Validition Error; "
-                            + "firstname does only contain letters, Element: " + node.getChild("firstname").getName() + ", Value: " + firstName
-                            + ", Element: " + node.getChild("lastname").getName() + ", Value: " + lastName);
-                    fail("Element Validition Error; "
-                            + "firstname does only contain letters, Element: " + node.getChild("firstname").getName() + ", Value: " + firstName
-                            + ", Element: " + node.getChild("lastname").getName() + ", Value: " + lastName);
+                    String errorLogMessage = "Firstname does not only contain letters, Element: " + node.getChild("firstname").getName() + ", Value: " + firstName
+                            + ", Element: " + node.getChild("lastname").getName() + ", Value: " + lastName;
+
+                    LogHandler.getInstance().logMessage(errorLogMessage, "Element Validition Error; ");
+                    fail("Element Validition Error; " + errorLogMessage);
                 }
                 else
                 {
                     continue;
                 }
             }
+        }
+        else
+        {
+            LogHandler.getInstance().logMessage("Document is null", "Validition Error; ");
+            fail("Document is null");
+        }
+    }
+
+    @Test
+    public void studentIsActive()
+    {
+        Document document = XMLHandler.getInstance().getXMLDocument(new File(XML_FILE));
+        Element classElement = document.getRootElement();
+
+        List<Element> elementList = classElement.getChildren();
+
+        if (elementList != null)
+        {
+            for (Element node : elementList)
+            {
+                System.out.println("Element Name: " + node.getName());
+                System.out.println("Element Text: " + node.getValue());
+
+                String activeStatusString = node.getChild("isactive").getValue();
+
+                boolean activeStatus = Boolean.parseBoolean(activeStatusString);
+
+                if (activeStatus)
+                {
+                    continue;
+                }
+                else
+                {
+                    String errorLogMessage = "Student is not Active, Element: " + node.getChild("isactive").getName() + ", Value: " + activeStatusString;
+
+                    LogHandler.getInstance().logMessage(errorLogMessage, "Element Validition Error; ");
+                    fail("Element Validition Error; " + errorLogMessage);
+                }
+            }
+        }
+        else
+        {
+            LogHandler.getInstance().logMessage("Document is null", "Validition Error; ");
+            fail("Document is null");
+        }
+    }
+
+    @Test
+    public void studentIsNotActive()
+    {
+        Document document = XMLHandler.getInstance().getXMLDocument(new File(XML_FILE));
+        Element classElement = document.getRootElement();
+
+        List<Element> elementList = classElement.getChildren();
+
+        if (elementList != null)
+        {
+            for (Element node : elementList)
+            {
+                System.out.println("Element Name: " + node.getName());
+                System.out.println("Element Text: " + node.getValue());
+
+                String activeStatusString = node.getChild("isactive").getValue();
+
+                boolean activeStatus = Boolean.parseBoolean(activeStatusString);
+
+                if (activeStatus)
+                {
+                    String errorLogMessage = "Student is not Active, Element: " + node.getChild("isactive").getName() + ", Value: " + activeStatusString;
+
+                    LogHandler.getInstance().logMessage(errorLogMessage, "Element Validition Error; ");
+                    fail("Element Validition Error; " + errorLogMessage);
+                }
+                else
+                {
+                    continue;
+                }
+            }
+        }
+        else
+        {
+            LogHandler.getInstance().logMessage("Document is null", "Validition Error; ");
+            fail("Document is null");
         }
     }
 }
