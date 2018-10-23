@@ -1,4 +1,3 @@
-
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.junit.jupiter.api.Test;
@@ -6,10 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.io.File;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.fail;
-
 
 public class UnitTests
 {
@@ -61,6 +57,88 @@ public class UnitTests
         {
             LogHandler.getInstance().logMessage("Document is not Wellformed", "Validation Error");
             fail("Is Not Null");
+        }
+    }
+
+    @Test
+    public void nameIsString()
+    {
+        Document document = XMLHandler.getInstance().getXMLDocument(new File(XML_FILE));
+        Element classElement = document.getRootElement();
+
+        List<Element> elementList = classElement.getChildren();
+
+        if (elementList != null)
+        {
+            for (Element node : elementList)
+            {
+                System.out.println("Element Name: " + node.getName());
+                System.out.println("Element Text: " + node.getValue());
+
+                String firstName = node.getChild("firstname").getValue();
+                String lastName = node.getChild("lastname").getValue();
+
+                if (isString(firstName) || isString(lastName))
+                {
+                    continue;
+                }
+                else
+                {
+                    LogHandler.getInstance().logMessage("Text is null", "Element Validition Error; "
+                            + "firstname does not only contain letters, Element: " + node.getChild("firstname").getName() + ", Value: " + firstName
+                            + ", Element: " + node.getChild("lastname").getName() + ", Value: " + lastName);
+                    fail("Element Validition Error; "
+                            + "firstname does not only contain letters, Element: " + node.getChild("firstname").getName() + ", Value: " + firstName
+                            + ", Element: " + node.getChild("lastname").getName() + ", Value: " + lastName);
+                }
+            }
+        }
+    }
+
+    public boolean isString(String str)
+    {
+        if (str.chars().allMatch(Character::isLetter))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    @Test
+    public void nameIsNotString()
+    {
+        Document document = XMLHandler.getInstance().getXMLDocument(new File(XML_FILE));
+        Element classElement = document.getRootElement();
+
+        List<Element> elementList = classElement.getChildren();
+
+        if (elementList != null)
+        {
+            for (Element node : elementList)
+            {
+                System.out.println("Element Name: " + node.getName());
+                System.out.println("Element Text: " + node.getValue());
+
+                String firstName = node.getChild("firstname").getValue();
+                String lastName = node.getChild("lastname").getValue();
+
+                if (isString(firstName) || isString(lastName))
+                {
+                    LogHandler.getInstance().logMessage("Text is null", "Element Validition Error; "
+                            + "firstname does only contain letters, Element: " + node.getChild("firstname").getName() + ", Value: " + firstName
+                            + ", Element: " + node.getChild("lastname").getName() + ", Value: " + lastName);
+                    fail("Element Validition Error; "
+                            + "firstname does only contain letters, Element: " + node.getChild("firstname").getName() + ", Value: " + firstName
+                            + ", Element: " + node.getChild("lastname").getName() + ", Value: " + lastName);
+                }
+                else
+                {
+                    continue;
+                }
+            }
         }
     }
 }
